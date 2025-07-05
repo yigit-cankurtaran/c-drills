@@ -25,4 +25,5 @@ int main(){
 
   printf("printing from malloc: %s\n", new);
 
+  free(new);
 }
