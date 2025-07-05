@@ -1,3 +1,9 @@
+/*
+write a function that returns a pointer to a local variable.
+explain what goes wrong and why.
+*/
+
+
 #include <stdio.h>
 
 int* localret(){

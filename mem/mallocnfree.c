@@ -1,3 +1,10 @@
+/*
+allocate a dynamic array of ints, fill with values
+print them, free it
+later resize it with realloc.
+*/
+
+
 #import <stdlib.h>
 #import <stdio.h>
 
