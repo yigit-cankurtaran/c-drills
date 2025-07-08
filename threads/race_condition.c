@@ -15,15 +15,19 @@ void* increment (void* arg){
 
  int main(){
    int thread_count = 8;
+   int thread_ids[thread_count];
    pthread_t threads[thread_count];
 
    for (int i = 0; i < thread_count; i++){
-     pthread_create(&threads[i], NULL, increment, &i);
+     thread_ids[i] = i;
+     pthread_create(&threads[i], NULL, increment, &thread_ids[i]);
+     // sneaky bug, if we pass &i they all read a different number
    }
 
    for (int i = 0; i < thread_count; i++){
      pthread_join(threads[i], NULL);
    }
 
+   // threads working at pretty much random
    // race condition, we'll use a mutex to fix this later on
  }
