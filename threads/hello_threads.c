@@ -13,6 +13,7 @@ int main(){
 
   for (int i = 0; i < 5; i++){
     thread_count[i] = i;
+    // last part is the argument we pass into the function
     pthread_create(&threads[i], NULL, message, &thread_count[i]);
   }
 
