@@ -10,6 +10,8 @@ void* increment (void* arg){
 
   while (1){
    pthread_mutex_lock(&locker);
+   // we want to lock only the critical section, here it's the count and print.
+
    if (count >= 10000) {
      pthread_mutex_unlock(&locker);
      break; // break loop if we hit 10000, reversing the check
@@ -18,6 +20,8 @@ void* increment (void* arg){
    count++;
    printf("thread %d: count is %d\n", num, count);
    pthread_mutex_unlock(&locker);
+
+   // after we unlock we can do non-critical work
   }
 
   return NULL;
