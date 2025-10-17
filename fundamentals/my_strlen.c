@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// TODO: ankify some stuff here
+
 // returning size_t because strings can be very long
 size_t my_strlen(const char* string){ // const here to not modify the data the pointer points to
   // handle null pointer
@@ -34,4 +36,10 @@ int main(){
   printf("pointer test of first %zd\n", strlen_with_pointers(hi));
   printf("pointer test of long test %zd\n", strlen_with_pointers(longtest));
   printf("pointer test of null test %zd\n", strlen_with_pointers(null)); // segfaulted
+
+  // testing arr size otherwise
+  // printf("size of int array test\n");
+  // int nums[] = {1,2,3,4,5,6,7,8,9};
+  // printf("size of nums = %lu\n", sizeof(nums)/sizeof(int));
+
 }
