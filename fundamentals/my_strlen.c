@@ -18,9 +18,9 @@ size_t my_strlen(const char* string){ // const here to not modify the data the p
 size_t strlen_with_pointers(const char *s){
   if (!s) return 0;
 
-  const char *p = s;
-  while (*p) p++;
-  return p - s;
+  const char *p = s; // pointer cursor starting at the beginning
+  while (*p) p++; // move p forward until it hits the NULL
+  return p - s; // return number of chars between start and end
 }
 
 int main(){
