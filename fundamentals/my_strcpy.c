@@ -6,7 +6,6 @@ void my_strcpy(char* str1, char* str2){
     printf("use valid strings");
   }
 
-  // TODO: str2 prints a lot of "l"s, look into it and make this work properly
   for (int i = 0; i < strlen(str1); i++){
     str2[i] = str1[i];
   }
